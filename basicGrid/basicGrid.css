@@ -1,0 +1,12 @@
+.basic-grid {
+  display: grid;
+  gap: 1rem;
+
+  /* minmax(x, y) says: don't let my width go bellow x and higher than y */
+  /* grid-template-columns: repeat(12, minmax(240px, 1fr )); */
+
+  /* To fix the overflow, create an implicit grid */
+  /* auto-fill creates more columns with more empty space */
+  /* auto-fit expands the children to take up available space */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}

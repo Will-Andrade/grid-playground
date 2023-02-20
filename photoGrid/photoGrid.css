@@ -1,0 +1,22 @@
+.photo-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  /* sets all rows to this value */
+  grid-auto-rows: 240px;
+}
+
+
+@media screen and (min-width: 600px) {
+  .card-tall {
+    /* any item with this class should span across multiple rows vertically, that is, the item will be made taller */
+    /* this says start here / end here, or in this case, start wherever - span 2 rows and end wherever */
+    grid-row: span 2 / auto;
+  }
+  
+  .card-wide {
+    /* any item with this class should span across multiple columns horizontally */
+    grid-column: span 2 / auto;
+  }
+}
